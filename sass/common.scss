@@ -1,0 +1,323 @@
+@import "base";
+/* ------------------------------------- Reset css -------------------------------------------- */
+/* ------------------------------------- Reset css -------------------------------------------- */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5,
+h6, p, blockquote, pre,a, abbr, acronym, address, big,
+cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small,
+strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt,
+dd, ol, ul, li,fieldset, form, label, legend,table, caption,
+tbody, tfoot, thead, tr, th, td,article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary,time, mark, audio, video { 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+body, html {
+    height: 100%
+}
+img,fieldset {border:none;}
+input[type="submit"], button {cursor:pointer;}
+input[type='submit']::-moz-focus-inner{padding:0;border:0}
+textarea {overflow: auto;}
+input, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+input, textarea, select,
+h1,h2,h3,h4,h5,h6,a,span,a:focus {
+    outline: none;
+}
+ul,ol {
+    list-style-type: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section { 
+    display: block;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+/* ------------------------------------- //END Reset css --------------------------------------- */
+/* ----------------------------------------- Main styles --------------------------------------- */
+::-webkit-selection {
+    background: #c2cedd;
+}
+::selection {
+    background: #c2cedd;
+}
+::-webkit-scrollbar {
+    width: 14px;
+}
+/* Track */ 
+::-webkit-scrollbar-track {
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b9b9b9;
+}
+::-webkit-scrollbar-track-piece  {
+    background: $gray;
+}
+body {
+    min-width: 1000px;
+    color: $dark;
+    @include fsl;
+    font-size: 15px;
+    line-height: 1;
+    background: #fff;
+}
+a{
+    color: $blue;
+    text-decoration: none;
+    &:hover{
+
+    }
+}
+.l-layout {
+    margin: 0;
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    background: #fff;
+}
+.push {
+    clear: both;
+    height: 76px;
+}
+.wrapper {
+    overflow: hidden;
+}
+.wrap {
+    @extend %clr;
+}
+.clr {
+    clear: both;
+    height: 0;
+}
+.l-container {
+    margin: 0 auto;
+    width: 1000px;
+    padding: 0 5px;
+}
+/* ------------------------------------ //END Main styles --------------------------------------- */
+ 
+/* ----------------------------------------- Header --------------------------------------------- */
+.header {
+    margin-bottom: 28px;
+    padding: 20px 0 0;
+    min-height: 70px;
+    .btn {
+        float: left;
+        margin-top: 14px;
+    }
+    .l-container {
+        @extend %clr;
+    }
+}
+.logo {
+    float: left;
+    margin-left: 18px;
+    font-weight: normal;
+    a {
+        color: $orange;
+        font-size: 32px;
+    }
+    strong {
+        display: block;
+        margin-top: 2px;
+        color: $blue;
+        font-weight: normal;
+        font-size: 18px;
+    }
+}
+.nav {
+    float: left;
+    margin-top: 15px;
+    ul {
+        @extend %clr;
+    }
+    li {
+        float: left;
+        padding: 0 46px;
+        border-left: 1px solid $dark;
+        &:first-child {
+            border-left: 0;
+        }
+    }
+    a {
+        font-size: 16px;
+        color: #4d4d4d;
+        text-decoration: none;
+    }
+    span {
+        display: block;
+        color: #888;
+    }
+    .active {
+        a {
+            color: $blue;
+        }
+    }
+}
+
+.user-login {
+    float: right;
+    margin: 7px 9px 0 0;
+    font-size: 12px;
+    color: $blue;
+    line-height: 1.2;
+}
+
+/* -------------------------------------- //END Header ------------------------------------------ */
+
+/* ----------------------------------------- sidebar -------------------------------------------- */
+.sidebar {
+    float: left;
+    padding-top: 19px;
+    width: 200px;
+}
+.sidebar__nav {
+    margin-bottom: 26px;
+    padding-left: 17px;
+    ul {
+        @extend %clr;
+    }
+    li {
+        position: relative;
+        margin-bottom: 23px;
+        padding-left: 28px;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }   
+    }
+    .table {
+        &:before {
+            @include sized-sprite($icons, table);            
+        }
+    }
+    .result {
+        &:before {
+            @include sized-sprite($icons, result);
+        }
+    }
+    .achieve {
+        &:before {
+            @include sized-sprite($icons, achieve);
+        }
+    }
+}
+.item {
+    margin-bottom: 8px;
+    background: $khaki;
+}
+.item__main {
+    font-size: 14px;
+    padding: 10px 25px 18px 22px;
+}
+/* --------------------------------------- //END sidebar ---------------------------------------- */
+
+/* ------------------------------------- Independent blocks -------------------------------------- */
+.btn {
+    display: inline-block;
+    padding: 0 23px;
+    height: 33px;
+    line-height: 33px;
+    color: #fff;
+    @include fs;
+    background: $orange;
+    @include box-shadow(2px 2px 2px rgba(0,0,0,.3));
+    &:active {
+        @include box-shadow(none);
+    }
+} 
+.btn_white {
+    color: $orange;
+    background: #fff;
+}
+.title {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 17px;
+    line-height: 43px;
+    color: #fff;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include sized-sprite($icons, corner);
+    }
+}
+.title__wrap {
+    display: block;
+    padding-left: 5px;
+    height: 43px;
+    background: $blue;
+    @include box-shadow(2px 2px 2px rgba(0,0,0,.3));
+    strong {
+        display: inline-block;
+        font-weight: normal;
+        line-height: 1;
+        vertical-align: middle;
+    }
+    i {
+        display: inline-block;
+        margin-right: 7px;
+        vertical-align: middle;
+        @include sized-sprite($icons, dou);
+    }
+}
+
+// popup
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,.7);
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 280px;
+    left: 50%;
+    z-index: 2000;
+    margin-left: -281px;
+    width: 562px;
+    border: 17px solid #fff;
+    background: $orange;
+    @include box-sizing(border-box);
+}
+.popup__title {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
+.popup__question {
+    padding: 85px 0 64px;
+    text-align: center;
+    .popup__title {
+        margin-bottom: 65px;
+    }
+    .btn {
+        margin-right: 9px;
+    }
+}
+/* ---------------------------------- //END Independent blocks ----------------------------------- */
+
+/* ----------------------------------------- Footer ---------------------------------------------- */
+
+/* -------------------------------------- //END Footer ------------------------------------------- */
