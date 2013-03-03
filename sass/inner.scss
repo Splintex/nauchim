@@ -83,6 +83,7 @@
 	}
 }
 .task-descr {
+	margin: 12px 0;
 	background: $gray;
 	@include box-sizing(border-box);
 	min-height: 196px;
@@ -130,7 +131,20 @@
 	p {
 		margin-bottom: 10px;
 	}
-	
+	ul {
+		padding-left: 23px;
+		list-style-type: decimal;
+		li {
+			color: $blue;
+		}
+	}
+	ol {
+		margin: 23px 0 23px 11px;
+		li {
+			margin-bottom: 3px;
+			color: $dark;
+		}
+	}
 }
 .title {
 	.icon-book {
@@ -262,5 +276,159 @@ table.tour_extend {
 	a {
 		margin-left: 30px;
 		color: $green;
+	}
+}
+.progress {
+	margin-top: 42px;
+	@extend %clr;
+	li {
+		position: relative;
+		float: left;
+		margin-bottom: 45px;
+		width: 6.25%;
+		text-align: center;
+	}
+	span {
+		display: block;
+		margin: 0 auto 13px;
+		width: 28px;
+		height: 28px;
+		background: $gray;
+		line-height: 28px;
+		@include border-radius(50%);
+	}
+	i {
+		display: inline-block;
+		@include sized-sprite($icons, minus);
+	}
+	.done {
+		i {
+			@include sized-sprite($icons, plus);
+		}
+	}
+}
+
+.want-another {
+	display: inline-block;
+	margin: 15px 0 0 20px;
+}
+.form {
+	margin: 25px 0;
+}
+
+.title_btn {
+	margin: 23px 0 12px;
+}
+.answer { 
+	@extend %clr;
+	.title {
+		float: left;
+		width: 76px;
+		font-size: 14px;
+	}
+	.input {
+		float: right;
+		width: 408px;
+	}
+	.btn-send {
+		clear: both;
+		float: right;
+		margin-top: 10px;
+	}
+}
+.tour-table_profile {
+	th {
+		padding: 15px 0;
+	}
+	td, th {
+		width: 13%;
+		&:first-child {
+			width: 30%;
+		}
+		&:nth-child(4) {
+			width: 15%;
+		}
+	}
+	.period {
+		span {
+			display: inline-block;
+		}
+	}
+	.period__month {
+		width: 105px;
+	}
+	.period__number {
+		width: 60px;
+	}
+}
+
+.solution_true {
+	.title {
+		width: 100% !important;
+	}
+	input {
+		margin: 10px 0 0 23px;
+		background: none;
+		@include fsl;
+		font-size: 15px;
+	}
+	input[type="submit"] {
+		color: $green;
+	}
+	input[type="reset"] {
+		color: $orange;
+		cursor: pointer;
+	}
+}
+
+.task-nav {
+	margin-bottom: 35px;
+	padding-left: 23px;
+	color: $blue;
+	strong {
+		display: inline-block;
+		margin: 0 7px;
+		font-weight: normal;
+	}	
+	span {
+		cursor: pointer;
+	}
+}
+.col-600 {
+	width: 600px;
+	.textarea {
+		margin-bottom: 20px;
+	}
+	.watch-task {
+		float: left;
+		margin: 35px 0 0 15px;
+		color: $green;
+	}
+	.btn_gray {
+		float: right;
+		margin-top: 20px;
+	}
+}
+.btns {
+	.btn {
+		position: relative;
+		padding: 0;
+		height: 44px;
+		width: 197px;
+		line-height: 44px;
+		vertical-align: top;
+		text-align: center;
+	}
+	.result-list {
+		display: none;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 44px;
+		color: $dark;
+		text-align: left;
+		li {
+			padding-left: 30px;
+		}
 	}
 }

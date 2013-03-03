@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>7.1</title>
+	<title>11</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/common.js"></script>  
@@ -35,46 +35,64 @@
         </div>
     </header>
     <section class="l-container">
-        <div class="title">
-            <div class="title__wrap title__wrap">
-                <strong>= название турнира =</strong>
-            </div>
-        </div>
         <div class="wrap">
             <div class="equ-col">
-                <div class="task-descr">
-                    <div class="title title_orange">
-                        <div class="title__wrap">
-                            <i class="icon-clock"></i>
-                            <strong>До начала осталось 40 минут</strong>
+                <div class="themes">
+                    <div class="title">
+                        <div class="title__wrap title__wrap">
+                            <strong>Список турниров:</strong>
                         </div>
                     </div>
-                    <div class="task-descr__body">
-                        Описание задачи
+                    <div class="themes__body">
+                        <ul>
+                            <li>
+                                <a href="#">Турнир городской 9 класс – осталось 2 дня</a>
+                                <ol>
+                                    <li>Задание 1 – 10 решений из 120</li>
+                                    <li>Задание 2 – 15 решений из 350</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="#">… А 7 класс – осталось 3 дня</a>
+                                <ol>
+                                    <li>Задание 1 – 26 решений из 35    </li>
+                                    <li>Задание 2 – 125 решений из 250</li>
+                                    <li>Задание 3 – </li>
+                                    <li>Задание 4 - </li>
+                                </ol>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="equ-col">
-                <div class="solution">
+                <div class="title title_orange">
+                    <div class="title__wrap title__wrap">
+                        <strong>Что нужно, то и проверю</strong>
+                    </div>
+                </div>
+                <div class="title title_orange">
+                    <div class="title__wrap title__wrap">
+                        <strong>У меня есть 30 мин на проверку</strong>
+                    </div>
+                </div>
+                <div class="task-descr">
+                    <div class="task-descr__body">
+                        Описание задачи
+                    </div>
+                </div>
+                <div class="solution solution_true">
                     <div class="wrap">
-                        <div class="title">
+                        <div class="title title_width">
                             <div class="title__wrap">
                                 <strong>Решение</strong>
                             </div>
                         </div>
-                        <div class="title title_green">
-                            <a href="#" class="title__wrap">
-                                <strong>Развернуть окно</strong>
-                            </a>
-                        </div>
                     </div>
                     <form>
                         <textarea class="textarea"></textarea>
-                        <div class="input-file">
-                            <span>Прикрепить файл</span>
-                            <input type="file">
-                        </div>
-                        <button type="submit" class="btn-send">Отправить решение</button>
+                        <input type="submit" value="Приступить к проверке">
+                        <input type="reset" value="Отказаться">
                     </form>
                 </div>
             </div>

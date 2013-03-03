@@ -258,6 +258,13 @@ a{
     color: #fff;
     background: $green;
 }
+.btn_blue {
+    color: #fff;
+    background: $blue;
+}
+.btn_gray {
+    background: #ababab;
+}
 .title {
     position: relative;
     margin-bottom: 12px;
@@ -296,6 +303,10 @@ a{
         margin-right: 7px;
         vertical-align: middle;
         @include sized-sprite($icons, dou);
+    }
+    a {
+        font-size: 14px;
+        color: #fff;
     }
 }
 .title_orange {
@@ -393,6 +404,28 @@ a{
         opacity: 0;
     }
 }
+.field {
+    margin-bottom: 7px;
+    padding-left: 23px;
+    label {
+        display: inline-block;
+        width: 25%;
+        margin-right: 1%;
+        color: $blue;
+        vertical-align: middle;
+        @include box-sizing(border-box);
+    }
+}
+.input {
+    padding: 0 10px;
+    height: 44px;
+    width: 73%;
+    display: inline-block;
+    @include box-sizing(border-box);
+    vertical-align: middle;
+    border: 2px solid $gray;
+    @include fsl;
+}
 .btn-send {
     position: relative;
     padding-left: 37px;
@@ -400,6 +433,8 @@ a{
     line-height: 20px;
     color: $green;
     background: none;
+    @include fsl;
+    font-size: 15px;
     &:before {
         content: "";
         position: absolute;
