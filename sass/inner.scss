@@ -73,12 +73,22 @@
 	&:first-child { 
 		float: left;
 	}
+	.solution {
+		.title {
+			width: 334px;
+		}
+		.title_green {
+			width: 154px;
+		}
+	}
 }
 .task-descr {
-	padding: 17px 23px;
 	background: $gray;
 	@include box-sizing(border-box);
 	min-height: 196px;
+}
+.task-descr__body {
+	padding: 17px 23px;
 }
 .solution {
 	position: relative;
@@ -87,12 +97,13 @@
 		width: 100%;
 		top: 0;
 		left: 0;
+		@include box-shadow(inset 0 4px 0 #fff);
 	}
 	.title {
 		position: relative;
 		z-index: 2;
 		float: left;
-		width: 334px;
+		width: 842px;
 		font-size: 15px;
 	}
 	.title_green {
@@ -107,5 +118,97 @@
 	}
 	.btn-send {
 		margin: 24px 0 0 18px;
+	}
+}
+
+.themes {
+	background: $gray;
+}
+.themes__body {
+	padding: 23px;
+	p {
+		margin-bottom: 10px;
+	}
+	
+}
+.title {
+	.icon-book {
+		display: inline-block;
+		@include sized-sprite($icons, book);
+	} 
+}
+
+table.tour_extend {
+	td {
+		width: 128px;
+		border-bottom: 2px solid #fff;
+	}
+	tbody {
+		.status {
+			width: 160px;
+			padding-left: 22px;
+			text-align: left;
+			span {
+				margin: 0;
+			}
+		}
+		.descr {
+			width: 315px;
+			span {
+				font-size: 18px;
+			}
+		}
+		.place {
+			width: 113px;
+		}
+	}
+	
+}
+.info-message {
+	margin-bottom: 30px;
+	color: $blue;
+}
+.wrap_levels {
+	.title {
+		float: left;
+		margin: 0 5px 0 0;
+		width: 218px;
+		font-size: 17px;
+	}
+	.title__wrap {
+		padding-left: 10px;
+	}
+	span {
+		display: block;
+		font-size: 14px;
+	}
+}
+.tour-table {
+	width: 100%;
+	th,td {
+		width: 20%;
+		background: $gray;
+		border-left: 2px solid #fff;
+		&:first-child {
+			border: 0;
+			padding-left: 27px;
+			text-align: left;
+		}
+	}
+	th {
+		color: $blue;
+		font-weight: normal;
+		padding: 27px 0;
+	}
+	td {
+		padding: 15px 0;
+		text-align: center;
+	}
+	tr {
+		&:last-child {
+			td {
+				padding-bottom: 30px;
+			}
+		}
 	}
 }

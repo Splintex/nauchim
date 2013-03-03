@@ -22,7 +22,7 @@ table.tour {
             border-left: 2px solid #fff;
             @include box-sizing(border-box);
             &:first-child {
-                border: 0;
+                border-left: 0;
             }
         }
         .status {
@@ -104,6 +104,7 @@ div.tour {
         text-align: center;
         background: $gray;
         border-left: 2px solid #fff;
+        @include box-sizing(border-box);
         &:first-child {
             border: 0;
         }
