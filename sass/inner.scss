@@ -122,6 +122,7 @@
 }
 
 .themes {
+	margin: 12px 0;
 	background: $gray;
 }
 .themes__body {
@@ -210,5 +211,44 @@ table.tour_extend {
 				padding-bottom: 30px;
 			}
 		}
+	}
+}
+.tour-table_result {
+	td, th {
+		width: 16%;
+		background: $khaki;
+		&:first-child {
+			width: 17%;
+			background: $gray;
+		}
+	}
+}
+.sidebar_width {
+	padding-top: 0;
+	width: 280px;
+}
+.sidebar_right {
+	float: right;
+	padding-top: 0;
+}
+.result-list {
+	li {
+		margin-bottom: 4px;
+		padding: 0 5px 0 25px;
+		height: 47px;
+		line-height: 47px;
+		background: $khaki;
+	}
+	span {
+		display: inline-block;
+		margin-right: 15px;
+	}
+}
+.middle-col {
+	float: left;
+	width: 490px;
+	margin-left: 15px;
+	.description {
+		margin-top: 0;
 	}
 }

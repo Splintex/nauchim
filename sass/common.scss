@@ -222,6 +222,13 @@ a{
     .title {
         font-size: 14px;
     }
+    ul {
+        padding-left: 18px;
+        list-style-type: decimal;
+    }
+    li {
+        margin-bottom: 18px;
+    }
 }
 .item__main {
     font-size: 14px;
