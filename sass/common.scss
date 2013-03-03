@@ -112,6 +112,7 @@ a{
     margin-bottom: 28px;
     padding: 20px 0 0;
     min-height: 70px;
+    @include box-shadow(0 30px 100px rgba(0,0,0,.05));
     .btn {
         float: left;
         margin-top: 14px;
@@ -218,6 +219,9 @@ a{
 .item {
     margin-bottom: 8px;
     background: $khaki;
+    .title {
+        font-size: 14px;
+    }
 }
 .item__main {
     font-size: 14px;
@@ -249,12 +253,17 @@ a{
     padding-left: 17px;
     line-height: 43px;
     color: #fff;
+    font-size: 18px;
+    @include box-sizing(border-box);
     &:before {
         content: "";
         position: absolute;
         left: 0;
         top: 0;
         @include sized-sprite($icons, corner);
+    }
+    .tour-status {
+        color: #fff;
     }
 }
 .title__wrap {
@@ -276,7 +285,14 @@ a{
         @include sized-sprite($icons, dou);
     }
 }
-
+.title_orange {
+    &:before {
+        @include sized-sprite($icons, corner2);
+    }
+    .title__wrap {
+        background: $orange;
+    }
+}
 // popup
 .overlay {
     display: none;

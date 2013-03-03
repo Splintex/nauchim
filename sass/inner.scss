@@ -1,1 +1,29 @@
 @import "base";
+.title_big {
+    float: left;
+    width: 649px;
+}
+.title_orange-small {
+    float: right;
+    width: 348px;
+    .icon-clock {
+		display: inline-block;
+		@include sized-sprite($icons, clock2);
+	}
+}
+.description {
+	margin-bottom: 38px;
+	padding: 40px 23px;
+	background: $gray;
+	p {
+		margin-bottom: 20px;
+	}
+}
+.tour-descr {
+	li {
+		margin-bottom: 28px;
+	}
+	span {
+		color: $blue;
+	}
+}
