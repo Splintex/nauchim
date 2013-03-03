@@ -247,6 +247,10 @@ a{
     color: $orange;
     background: #fff;
 }
+.btn_green {
+    color: #fff;
+    background: $green;
+}
 .title {
     position: relative;
     margin-bottom: 12px;
@@ -267,6 +271,8 @@ a{
     }
 }
 .title__wrap {
+    position: relative;
+    z-index: 2;
     display: block;
     padding-left: 5px;
     height: 43px;
@@ -293,6 +299,18 @@ a{
         background: $orange;
     }
 }
+.title_green {
+    &:before {
+        @include sized-sprite($icons, corner3);
+        @include box-shadow(2px 0px 0px 0px rgba(0,0,0,.15));
+    }
+    .title__wrap {
+        display: block;
+        color: #fff;
+        background: $green;
+    }
+}
+
 // popup
 .overlay {
     display: none;
@@ -330,6 +348,57 @@ a{
     }
     .btn {
         margin-right: 9px;
+    }
+}
+// form elements
+.textarea {
+    width: 100%;
+    padding: 10px;
+    min-height: 196px;
+    border: 2px solid $gray;
+    resize: vertical;
+    @include box-sizing(border-box);
+    @include fsl;
+}
+.input-file {
+    width: 165px;
+    position: relative;
+    height: 30px;
+    span, input {
+        position: absolute;
+        left: 0;
+        top: 9px;
+    }
+    span {
+        padding-left: 36px;
+        color: $blue;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -6px;
+            @include sized-sprite($icons, clip);
+        }
+    }
+    input {
+        z-index: 2;
+        width: 165px;
+        opacity: 0;
+    }
+}
+.btn-send {
+    position: relative;
+    padding-left: 37px;
+    height: 20px;
+    line-height: 20px;
+    color: $green;
+    background: none;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 2px;
+        @include sized-sprite($icons, latter);
     }
 }
 /* ---------------------------------- //END Independent blocks ----------------------------------- */

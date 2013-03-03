@@ -12,12 +12,15 @@
 	}
 }
 .description {
-	margin-bottom: 38px;
+	margin: 12px 0;
 	padding: 40px 23px;
 	background: $gray;
 	p {
 		margin-bottom: 20px;
 	}
+}
+.take-part-wrap {
+	margin-top: 38px;
 }
 .tour-descr {
 	li {
@@ -25,5 +28,84 @@
 	}
 	span {
 		color: $blue;
+	}
+}
+.tour-head_mod {
+	margin: 12px 0 0;
+	padding: 11px 15px 11px 20px;
+	.tour-status {
+		margin-top: 9px;
+	}
+}
+.task-table {
+	margin: 12px 0;
+	@extend %clr;
+	margin-right: -10px;
+	li {
+		float: left;
+		padding: 23px 5px 0 44px;
+		width: 167px;
+		height: 76px;
+		background: $khaki;
+		border-right: 2px solid #fff;
+		border-bottom: 2px solid #fff;
+		@include box-sizing(border-box);
+	}
+	.active {
+		position: relative;
+		padding-left: 62px;
+		background: $gray;
+		&:before {
+			content: "";
+			position: absolute;
+			left: 28px;
+			top: 23px;
+			@include sized-sprite($icons, ok2);
+		}
+	}
+	span {
+		display: block;
+	}
+}
+.equ-col {
+	float: right;
+	width: 492px;
+	&:first-child { 
+		float: left;
+	}
+}
+.task-descr {
+	padding: 17px 23px;
+	background: $gray;
+	@include box-sizing(border-box);
+	min-height: 196px;
+}
+.solution {
+	position: relative;
+	.wrap {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	.title {
+		position: relative;
+		z-index: 2;
+		float: left;
+		width: 334px;
+		font-size: 15px;
+	}
+	.title_green {
+		float: right;
+		width: 154px;
+	}
+	.textarea {
+		padding: 50px 10px;
+	}
+	.input-file {
+		margin: -46px 0 0 20px;
+	}
+	.btn-send {
+		margin: 24px 0 0 18px;
 	}
 }

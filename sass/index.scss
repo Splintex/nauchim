@@ -11,7 +11,7 @@ table.tour {
     th {
         font-weight: normal;
     }
-    .tour__head {
+    .tour-head {
         border: 0;  
     }
     tbody {
@@ -53,7 +53,7 @@ div.tour {
     margin-bottom: 11px;
     @include box-sizing(border-box);
 }
-.tour__head {
+.tour-head {
     @extend %clr;
     border: 2px solid $gray;
     padding: 20px 15px 20px 20px;
@@ -63,6 +63,9 @@ div.tour {
         float: left;
     }
     .connect {
+        float: right;
+    }
+    .btn {
         float: right;
     }
 }

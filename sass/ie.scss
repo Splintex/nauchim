@@ -1,7 +1,11 @@
 @import "base";
 // ie6-8
 .lteie8 {
-
+	.input-file {
+		input {
+			filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+		}
+	}
 }
 // ie7
 
